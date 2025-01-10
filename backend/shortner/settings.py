@@ -45,6 +45,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://pizzame.pythonanywhere.com',
+    'https://url-black.vercel.app',
 ]
 
 
