@@ -1,0 +1,19 @@
+# Handle line endings automatically for text files
+* text=auto
+
+# Ignore binary files from text conversions
+*.jpg binary
+*.png binary
+*.gif binary
+*.pdf binary
+
+# Set specific language handling (optional)
+*.js linguist-language=JavaScript
+*.tsx linguist-language=TypeScript
+*.html linguist-language=HTML
+
+# Apply LF endings to shell scripts
+*.sh text eol=lf
+
+# Handle JSON files
+*.json text eol=lf
