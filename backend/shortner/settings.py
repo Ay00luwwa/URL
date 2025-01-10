@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4t=9#ievu1uryrdo&7i(p$726byn#^asv61flvjif8=jk4a!0p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://pizzame.pythonanywhere.com/']
 
 
 # Application definition
@@ -44,6 +44,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://pizzame.pythonanywhere.com/',
 ]
 
 

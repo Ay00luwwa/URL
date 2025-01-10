@@ -16,22 +16,22 @@ export default function URLShortener() {
     setShortenedUrl("");
 
     try {
-      const response = await fetch("http://localhost:9000/api/shorten/", {
+      const response = await fetch("https://pizzame.pythonanywhere.com/api/shorten/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ original_url: originalUrl }), // Use correct field name
+        body: JSON.stringify({ original_url: originalUrl }),
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); // Get error details if available
+        const errorData = await response.json(); 
         throw new Error(errorData.error || "Failed to shorten URL");
       }
 
       const data = await response.json();
-      console.log('Response Data:', data); // Log the response data for debugging
-      setShortenedUrl(data.short_url); // Ensure this matches your serializer's output
+      console.log('Response Data:', data); 
+      setShortenedUrl(data.short_url); 
     } catch (err) {
       setError("Failed to shorten URL. Please try again.");
       console.error("Error:", err);
